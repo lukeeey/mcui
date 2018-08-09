@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Create World Screen Demo</title>
+  </head>
+  <body>
+  <script>
+  var moreOptions = function() {
+    document.getElementById('create-world').style.display = 'none';
+	document.getElementById('create-world-map').style.display = 'block';
+	document.getElementById('more-options').style.display = 'block';
+  }
+  
+  var createWorld = function() {
+    document.getElementById('more-options').style.display = 'none';
+	document.getElementById('more-options-map').style.display = 'block';
+	document.getElementById('create-world').style.display = 'block';
+  }
+  </script>
+  <p style="align:top;">Click the tabs!</p>
+<img id="create-world" src="../image/demo/create-world.png" usemap="#create-world">
+<img id="more-options" src="../image/demo/more-options.png" usemap="#more-options" style="display:none;" >
+
+<map id="create-world-map" name="create-world">
+    <area  target="_blank" alt="" title="" href="javascript:moreOptions()" coords="597,70,909,145" shape="rect">
+</map>
+
+<map id="more-options-map" name="more-options" style="display:none;">
+    <area target="_blank" alt="" title="" href="javascript:createWorld()" coords="179,68,591,141" shape="rect">
+</map>
+  </body>
+</html>
